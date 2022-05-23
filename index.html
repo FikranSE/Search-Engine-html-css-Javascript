@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1><span>S</span>earch <span>E</span>ngine</h1>
+        </div>
+        <div class="form">
+            <div class="search-bx">
+                <input type="text" placeholder="Search.." class="query" value="">
+                <div class="icon">
+                    <div><i class="bi bi-search"></i></div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="cari">Search</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let query = document.querySelector('.query');
+    let cari = document.querySelector('.cari');
+    let icon = document.querySelector('.bi-search')
+
+    cari.onclick = function () {
+        let url = 'https://www.google.com/search?q='+query.value;
+        window.open(url,'self');
+    }
+    icon.onclick = function () {
+        let url = 'https://www.google.com/search?q='+query.value;
+        window.open(url,'self');
+    }
+</script>
+</html>
